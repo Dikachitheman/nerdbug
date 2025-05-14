@@ -28,7 +28,7 @@ async function getAllUsers() {
 async function deleteUser(id) {
   const db = getDB();
   const { ObjectId } = require('mongodb');
-  const result = await db.collection(collectionName).deleteOne({ _id: new ObjectId(id) });
+  const result = await db.collection(collectionName).deleteOne({ idx: new ObjectId(id) });
   return result.deletedCount > 0;
 }
 
