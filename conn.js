@@ -1,5 +1,6 @@
 const { MongoClient } = require('mongodb');
 
+// using connection string here to avoid having to send them seperately if they were in an env file
 const uri = 'mongodb+srv://dikachianosike:password900900@cluster0.a8fzitw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const client = new MongoClient(uri);
 
